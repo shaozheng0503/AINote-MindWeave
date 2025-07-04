@@ -1,133 +1,232 @@
-# NoteGen
+# AINote-MindWeave
+## 灵感织网，思维无界的非线性笔记工具
 
-![](https://img.shields.io/badge/free-pricing?logo=free&color=%20%23155EEF&label=pricing&labelColor=%20%23528bff)
-![](https://github.com/codexu/note-gen/actions/workflows/release.yml/badge.svg?branch=release)
-![](https://img.shields.io/github/v/release/codexu/note-gen)
-![](https://img.shields.io/github/downloads/codexu/note-gen/total)
-![](https://img.shields.io/github/commit-activity/m/codexu/note-gen)
-![](https://img.shields.io/github/issues-closed/codexu/note-gen)
+> 专为灵感碎片化与思维跳跃型用户设计  
+> 零压力记录 → 智能关联 → 结构化输出
 
-<div>
-  <a href="https://trendshift.io/repositories/12784" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12784" alt="codexu%2Fnote-gen | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-  <a href="https://hellogithub.com/repository/0163cb946dca44cc8905dbe34c2c987b" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=0163cb946dca44cc8905dbe34c2c987b&claim_uid=YJ39kIMBz1TGAvc" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  <a href="https://www.producthunt.com/products/notegen-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-notegen&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=956348&theme=light&t=1749194675492" alt="NoteGen - A&#0032;cross&#0045;platform&#0032;Markdown&#0032;note&#0045;taking&#0032;application | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</div>
+---
 
-## Guide
+## 1. 核心理念
 
-English | [简体中文](.github/README.zh.md) | [日本語](.github/README.ja.md)
+AINote-MindWeave 相信最好的想法往往来自于零散的灵感碎片。我们通过 AI 驱动的智能关联和网状结构，帮助您自由记录、轻松织网、高效输出，让思维的跳跃成为创新的源泉。
 
-🖥️ Official Document: [https://notegen.top](https://notegen.top)
+### 1.1 用户场景闭环
 
-💬 Join [WeChat/QQ Group](https://github.com/codexu/note-gen/discussions/110), [Discord](https://discord.gg/SXyVZGpbpk), [Telegram](https://t.me/notegen)
+```
+💡 碎片记录 → 🕸️ 自由关联 → ⚡ 冲突识别 → 🤖 AI 辅助整合 → 📄 多形态输出 → 🔄 反馈修正
+     ↓              ↓              ↓              ↓              ↓              ↓
+  文字/语音/     拖拽连接节点    矛盾点可视化   语义分析关联    导图/文章/PPT   优化关联规则
+  图片/草图
+```
 
-NoteGen is a cross-platform `Markdown` note-taking application dedicated to using AI to bridge recording and writing, organizing fragmented knowledge into a readable note.
+## 2. 核心设计原则
 
-![](https://s2.loli.net/2025/06/13/UbVGPrhFl3etnQz.png)
+### 2.1 零压力记录
 
-## Why Choose NoteGen?
+**无层级、无分类的碎片输入**  
+支持文字、语音、图片、草图、网页剪藏等多模态快速记录，完全无需选择分类或标签。灵感来了就记，让思维保持流畅。
 
-- Lightweight: [Installation package](https://github.com/codexu/note-gen/releases) is **only 20MB**, free with no ads or bundled software.
-- Cross-platform capabilities of `Tauri2`, it supports Windows, MacOS, Linux, iOS, and Android, and it supports free multi-device data synchronization.
-- Supports multiple recording methods including `screenshots`, `text`, `illustrations`, `files`, `links`, etc., meeting fragmented recording needs across various scenarios.
-- Native `Markdown(.md)` as storage format, no modifications, easy to migrate.
-- Native offline usage, supporting real-time synchronization to `GitHub, Gitee private repositories` with history rollback, and WebDAV synchronization.
-- AI-enhanced: Configurable with ChatGPT, Gemini, Ollama, LM Studio, Grok, and other models, with support for custom third-party model configuration.
-- RAG: Your notes are your knowledge base. Support embedding models and reranking models.
+**悬浮输入面板**  
+全局快捷键唤醒半透明输入框，覆盖在任何应用上方，3 秒内完成记录。无论您在写代码、看视频还是浏览网页，灵感都能瞬间捕获。
 
-## How to Use?
+### 2.2 非线性组织
 
-### Download
+**网状图谱结构**  
+笔记以节点形式存在，您可以通过拖拽自由连接节点，形成个性化关联关系（因果、对立、补充）。打破传统文件夹的线性限制，让知识以您的思维方式组织。
 
-Currently supports Mac, Windows, and Linux. Thanks to Tauri2's cross-platform capabilities, it will support iOS and Android in the future.
+**时空线索记录**  
+自动记录每个灵感的产生时间、地点、设备信息，支持按时间轴或地图视角回溯思维轨迹。让您的想法有迹可循，思维历程清晰可见。
 
-| Windows | MacOS | Linux | Android | iOS |
-| --- | --- | --- | --- | --- |
-| ✅ beta | ✅ beta | ✅ beta | 🛠️ alpha | 🛠️ alpha |
-| [Download 17 MB](https://notegen.top/en/download.html) | [Download 20.7 MB](https://notegen.top/en/download.html) | [Download 21.7 MB](https://notegen.top/en/download.html) | [Download](https://notegen.top/en/download.html) | [Download](https://notegen.top/en/download.html) |
+### 2.3 智能动态关联
 
-> [UpgradeLink offers application upgrade and download services](http://upgrade.toolsetlink.com/upgrade/example/tauri-example.html)
+**语义引擎分析**  
+AI 自动提取关键词、情绪、实体（人名/地点），识别潜在关联的碎片，生成「您可能想合并的灵感」提示。让机器理解您的想法，主动发现隐藏连接。
 
-### Enhancement
+**情境联想推荐**  
+分析您当前笔记的上下文，智能推荐历史记录中的相关片段。当您思考某个问题时，系统会提醒您"上周的会议记录提到相似概念"。
 
-The note-taking application can be used directly without configuration. If you want a better experience, please open the settings page to configure AI and synchronization.
+### 2.4 主动输出引导
 
-## From Recording to Writing
+**碎片聚合器**  
+输入目标（如"写产品方案"），工具自动抽取关联碎片，生成带逻辑关系的草稿框架。从无序到有序，让输出变得轻松自然。
 
-Conventional note-taking applications typically don't provide recording functionality. Users need to manually copy and paste content for recording, which greatly reduces efficiency. When faced with scattered recorded content, it requires significant effort to organize.
+**多形态输出**  
+一键将关联网络转换为思维导图、PPT 大纲、时间线叙事或结构化文章，支持自定义模板。同一份知识，多种表达方式。
 
-NoteGen is divided into `Recording` and `Writing` pages, with the following relationship:
+## 3. 系统架构设计
 
-- Recordings can be organized into notes and transferred to the writing page for in-depth composition.
-- During writing, you can insert recordings at any time.
+### 3.1 四层架构体系
 
-### Recording
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                            AINote-MindWeave 架构                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  📊 输出生成层                                                              │
+│  ├─ 碎片聚合器  ├─ 模板引擎  ├─ 多格式导出                                  │
+│  └─────────────┴────────────┴───────────────────────────────────────────────┘
+│  🎨 可视化交互层                                                            │
+│  ├─ 脑暴画布    ├─ 网状图谱  ├─ 冲突标红                                    │
+│  └─────────────┴────────────┴───────────────────────────────────────────────┘
+│  🕸️ 智能关联层                                                              │
+│  ├─ 语义引擎    ├─ 时空线索  ├─ 情境联想                                    │
+│  └─────────────┴────────────┴───────────────────────────────────────────────┘
+│  🧠 零压力记录层                                                            │
+│  ├─ 悬浮输入面板├─ 多模态捕获├─ 无分类存储                                  │
+│  └─────────────┴────────────┴───────────────────────────────────────────────┘
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-The recording function is similar to an **AI chatbot**, but when conversing with it, you can associate it with previously recorded content, switching from conversation mode to organization mode to arrange recordings into a readable note.
+## 4. 关键交互设计
 
-The following auxiliary features can help you record more effectively:
+### 4.1 脑暴画布模式
 
-- **Tags** to distinguish different recording scenarios.
-- **Personas** with support for custom prompts to precisely control your AI assistant.
-- **Clipboard Assistant** that automatically recognizes text or images in your clipboard and records them to your list.
+在无限缩放的画布上，灵感以气泡形式随机散布。您可以：
 
-### Writing
+**手势圈选交互**  
+圈选多个气泡，AI 立即生成摘要或关系建议，帮您发现隐藏的思维连接。
 
-The writing section is divided into two parts: **File Manager** and **Markdown Editor**.
+**气泡操作体验**  
+双击气泡展开详细内容，右滑冻结暂时无关的内容。让焦点更清晰，思路更连贯。
 
-**File Manager**
+### 4.2 网状关联可视化
 
-- Supports management of local Markdown files and GitHub synchronized files.
-- Supports unlimited directory hierarchy.
-- Supports multiple sorting methods.
+```
+网状知识图谱示例：
 
-**Markdown Editor**
+    [灵感A: 产品需求] ←── 因果 ──→ [灵感C: 技术方案]
+         ↕ 补充                        ↕ 补充
+    [灵感B: 用户反馈]              [灵感E: 市场趋势]
+         ↕ 对立                        ↕ 因果
+    [灵感D: 竞品分析] ←── 因果 ──→ [灵感E: 市场趋势]
 
-- Supports WYSIWYG, instant rendering, and split-screen preview modes.
-- Supports version control with history rollback.
-- Supports AI assistance for conversation, continuation, polishing, and translation functions.
-- Supports image hosting, uploading images and converting them to Markdown image links.
-- Supports HTML to Markdown conversion, automatically converting copied browser content to Markdown format.
-- Supports outlines, math formulas, mind maps, charts, flowcharts, Gantt charts, sequence diagrams, staves, multimedia, voice reading, title anchors, code highlighting and copying, graphviz rendering, and plantuml UML diagrams.
-- Supports real-time local content saving, delayed (10s without editing) automatic synchronization, and history rollback.
+AI 智能提示：
+🤖 您可能想合并：
+• 灵感A + 灵感B (产品需求与用户反馈互补)
+• 灵感C 与上周会议记录相关
+```
 
-## Other Features
+### 4.3 冲突点可视化
 
-- Global search for quickly finding and jumping to specific content.
-- Image hosting management for convenient management of image repository content.
-- Themes and appearance with support for dark themes and appearance settings for Markdown, code, etc.
-- Internationalization support, currently available in Chinese and English.
+系统自动标红相互矛盾的记录，如"用户需要简洁设计"与"用户喜欢多功能界面"。这些看似冲突的观点往往能催生创新的解决方案，引导您进行更深层的思考。
 
-## Contribute
+### 4.4 渐进式整理机制
 
-- [Read contribution guide](.github/CONTRIBUTING.md)
-- [Update plans](https://github.com/codexu/note-gen/issues/46)
-- [Submit bugs or improvement suggestions](https://github.com/codexu/note-gen/issues)
-- [Discussions](https://github.com/codexu/note-gen/discussions)
+**懒人分类设计**  
+长期未被关联的碎片自动归入"未整理区"，系统定期推送轻量整理任务，如"用三个词描述这张草图"。降低整理门槛，让知识管理变得轻松自然。
 
-## Contributors
+## 5. 差异化功能
 
-<a href="https://github.com/codexu/note-gen/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=codexu/note-gen" />
-</a>
+### 5.1 灵感溯源
 
-## Sponsors
+点击任意输出内容中的结论，可以回溯支撑该结论的所有关联碎片及推理路径。让思维过程透明化，便于反思和改进。
 
-<div>
-  <a href="https://cloud.siliconflow.cn/i/O2ciJeZw" target="_blank">
-    <img src="https://s2.loli.net/2025/06/11/65TLRh813e2YFzr.png" />
-  </a>
-  <a href="https://www.qiniu.com/products/ai-token-api?utm_source=NoteGen" target="_blank">
-    <img src="https://s2.loli.net/2025/06/11/OKJq542lTs7U9xg.png" />
-  </a>
-  <a href="http://upgrade.toolsetlink.com/upgrade/example/tauri-example.html" target="_blank">
-    <img src="https://s2.loli.net/2025/06/11/r2dqNIWVXp4RaFe.png" />
-  </a>
-  <a href="https://share.302.ai/jfFrIP" target="_blank">
-    <img src="https://s2.loli.net/2025/07/01/dPlkU1tejnDyV4S.png" />
-  </a>
-</div>
+### 5.2 外脑模式
 
-## Star History
+输入模糊指令如"找商业案例"，工具从您的碎片库中提取过去记录的相关素材，而非全网搜索。您的笔记就是您的个人知识外脑。
 
-[![Star History Chart](https://api.star-history.com/svg?repos=codexu/note-gen&type=Date)](https://www.star-history.com/#codexu/note-gen&Date)
+### 5.3 思维跃迁训练
+
+定期推送"随机碎片组合包"，强制关联看似不相关的笔记，激发创造性思考。让意外的碰撞产生创新的火花。
+
+## 6. 技术特色
+
+### 6.1 轻量化语义分析
+在本地设备完成关键词提取和语义分析，避免云端传输的隐私顾虑。您的想法只属于您自己。
+
+### 6.2 关联度分层显示
+用不同颜色和粗细区分 AI 推荐关联与用户手动关联的置信度。让您清楚了解每个连接的可靠程度。
+
+### 6.3 反碎片化机制
+智能检测过度分散的记录，通过"聚焦模式"隐藏旧碎片，减少认知负荷。在需要专注时保持思维清晰。
+
+## 7. 产品界面预览
+
+### 7.1 主界面布局
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🔍 全局搜索  │  ⚙️ 智能设置  │  📊 输出中心  │  🤖 AI 助手  │  ⏰ 时间轴  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 📝 快速记录  │                                                             │
+│ 🏷️ 标签管理  │                                                             │
+│ 📂 碎片库    │                    🎨 脑暴画布区域                          │
+│ 🗂️ 未整理区  │                                                             │
+│              │                                                             │
+│              │                                                             │
+├──────────────┼─────────────────────────────────────────────────────────────┤
+│ 节点数: 127  │  关联数: 89  │  今日新增: 5  │  智能度: 85%  │
+└──────────────┴─────────────────────────────────────────────────────────────┘
+```
+
+### 7.2 功能特色展示
+
+> 📸 **产品截图**  
+> 这里将展示 AINote-MindWeave 的实际界面截图，包括脑暴画布、网状图谱、AI 助手等核心功能。
+
+## 8. 产品交互流程
+
+### 8.1 完整使用流程
+
+```
+💭 灵感捕获阶段
+├─ 全局快捷键 (Ctrl+Shift+N)
+├─ 悬浮输入面板 (3秒记录)
+└─ 多模态输入 (文字/语音/图片/草图)
+
+🧠 智能分析阶段
+├─ 语义引擎 (关键词提取)
+├─ 情境分析 (时空线索)
+└─ 关联发现 (潜在连接)
+
+🎨 可视化阶段
+├─ 脑暴画布 (气泡散布)
+├─ 网状图谱 (节点连接)
+└─ 冲突标红 (矛盾发现)
+
+📝 输出生成阶段
+├─ 目标输入 (写产品方案)
+├─ 碎片聚合 (智能关联)
+└─ 多格式输出 (导图/文章/PPT)
+```
+
+### 8.2 三步上手
+
+1. **记录**：按下全局快捷键，随时捕获灵感碎片
+2. **关联**：在画布上拖拽连接，构建思维网络  
+3. **输出**：选择目标格式，一键生成结构化内容
+
+### 8.3 最佳实践
+
+**日常记录**  
+养成随手记录的习惯，无论想法多么零散都值得保存。每个伟大的创意都始于微小的火花。
+
+**定期整理**  
+每周花 10 分钟在画布上梳理关联，让知识网络不断完善。时间的积累会让您的思维体系越来越强大。
+
+**主动输出**  
+遇到写作或演讲需求时，先在系统中搜索相关碎片，您会惊喜地发现已有的素材比想象中丰富。
+
+## 9. 下载体验
+
+### 9.1 跨平台支持
+
+| Windows | macOS | Linux | Android | iOS |
+|---------|-------|-------|---------|-----|
+| ✅ 已发布 | ✅ 已发布 | ✅ 已发布 | 🔄 开发中 | 🔄 开发中 |
+
+### 9.2 安装说明
+
+访问 [官方网站](https://ainote-mindweave.com) 下载适合您平台的版本。安装包轻量化设计，仅需几分钟即可开始您的思维织网之旅。
+
+---
+
+**AINote-MindWeave** - 让每一个灵感都有价值，让每一次跳跃都有意义。
+
+---
+
+## 相关链接
+
+- 🌐 [官方网站](https://ainote-mindweave.com)
+- 📖 [使用文档](https://docs.ainote-mindweave.com)
+- 💬 [社区讨论](https://github.com/shaozheng0503/AINote-MindWeave/discussions)
+- 🐛 [问题反馈](https://github.com/shaozheng0503/AINote-MindWeave/issues)
